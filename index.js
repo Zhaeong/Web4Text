@@ -3,8 +3,6 @@ const express = require('express');
 
 const bodyParser = require('body-parser');
 
-
-
 const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
 const app = express();
@@ -29,7 +27,7 @@ app.post('/sms', (req, res) => {
 
 app.get('/', (req, res) => res.send('peepee in my poopoo' + req.body.Body));
 
-app.get('/tester', (req, res) => res.send('resu:' + req.body.Body));
+app.get('/tester', (req, res) => res.send('resu:' + req));
 
 http.createServer(app).listen(8080, () => {
   console.log('Express server listening on port 8080');
