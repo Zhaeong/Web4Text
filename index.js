@@ -56,7 +56,7 @@ app.get('/get/*', (req, res) =>
 	    //The null, 2 makes it print to console in pretty way
 	    var jsonString = JSON.stringify(jsonResult, null, 2); 
 
-	    res.send('result:<br>' + jsonString);
+	    res.send('result:<br> <pre>' + jsonString + '</pre>');
 
 	    console.log(jsonString);
 	  });
