@@ -40,7 +40,7 @@ app.get('/get/*', (req, res) =>
 	console.log(searchTerm);
 	console.log("==========================");
 	
-	http.get('http://api.duckduckgo.com/?q=' + searchTerm + '&format=json', (resp) => {
+	http.get('http://api.duckduckgo.com/?q=' + searchTerm + '&format=json&pretty=1', (resp) => {
 	  let data = '';
 
 	  // A chunk of data has been recieved.
